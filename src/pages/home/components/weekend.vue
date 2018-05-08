@@ -1,15 +1,14 @@
 <template>
   <div>
-    <div class="recommend-title">热销推荐</div>
+    <div class="recommend-title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList">
+      <li class="item border-bottom" v-for="item in weekendList">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" alt="图片">
         </div>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
-          <button class="item-button">查看详情</button>
         </div>
       </li>
     </ul>
@@ -19,22 +18,22 @@
   export default {
     data() {
       return {
-        recommendList: [
+        weekendList: [
           {
             id: '0001',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/201310/24/f4adf4344d90947dc8d65eac.jpg_200x200_4b7cb1f3.jpg',
+            imgUrl: 'https://imgs.qunarzz.com/sight/source/1508/f8/cadd4e229d3402.jpg_r_640x214_c38fb221.jpg',
             title: '周杰伦',
             desc: 'ABCDEFG哈利波特与死亡圣器'
           },
           {
             id: '0001',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/76/ec3c55dafef8e27f2dbdb6603f871568.water.jpg_200x200_efd129ca.jpg',
+            imgUrl: 'https://imgs.qunarzz.com/sight/source/1602/88/bf120edeaea383.jpg_r_640x214_f8591f7b.jpg',
             title: '周杰伦',
             desc: 'ABCDEFG哈利波特与死亡圣器'
           },
           {
             id: '0001',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/1708/a6/a6912dd69c47e87ba3.img.png_200x200_337a013b.png',
+            imgUrl: 'https://imgs.qunarzz.com/sight/source/1506/45/313877f3917dbe.jpg_r_640x214_1c113e46.jpg',
             title: '周杰伦',
             desc: 'ABCDEFG哈利波特与死亡圣器'
           }
@@ -51,30 +50,21 @@
     background #eee
     text-indent .2rem
   .item
-    display flex
-    overflow hidden
-    height: 1.9rem
-    .item-img
-      width: 1.7rem
-      height: 1.7rem
-      padding: 0.1rem
+    .item-img-wrapper
+      overflow 0
+      padding-bottom: 39%
+      height 0
+      .item-img
+        width: 100%
     .item-info
-      padding: .1rem
-      flex: 1
-      min-width: 0
+      padding .1rem
       .item-title
         line-height: .54rem
         font-size: .32rem
         ellipsis()
       .item-desc
-        line-height: .4rem
-        color: dimgrey
+        line-height .4rem
+        color: dimgray
         ellipsis()
-      .item-button
-        line-height: .44rem
-        margin-top: .16rem
-        padding: 0 .2rem
-        border-radius:  .06rem
-        color: #ffffff
-        background-color: #ff9300
 </style>
+
