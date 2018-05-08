@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page,index) in pages" :key="index">
         <div class="icon" v-for="item in page" :key="item.id">
           <div class="icon-img">
@@ -51,7 +51,10 @@
         }, {
           id: '0009',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'}]
+          desc: '景点门票'}],
+        swiperOption: {
+          autoplay: false
+        }
       }
     },
     computed: {
@@ -76,6 +79,8 @@
     width: 100%
     height 0
     padding-bottom: 50%
+  .icons
+    margin-top .2rem
     .icon
       position relative
       width: 25%
