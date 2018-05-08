@@ -13,6 +13,7 @@
   import HomeIcons from './components/icons.vue'
   import HomeRecommend from './components/recommend.vue'
   import HomeWeekend from './components/weekend.vue'
+  import axios from 'axios'
   export default {
     name: 'Home',
     components: {
@@ -21,6 +22,18 @@
       HomeIcons,
       HomeRecommend,
       HomeWeekend
+    },
+    mounted() {
+      this.getHomeInfo()
+    },
+    methods: {
+      getHomeInfo() {
+        axios.get('/api/index.json')
+          .then(this.getHomeInfoSucc)
+      },
+      getHomeInfoSucc(res) {
+        console.log(res.data)
+      }
     }
   }
 </script>
