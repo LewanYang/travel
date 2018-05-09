@@ -18,15 +18,11 @@
         swiperOption: {
           pagination: '.swiper-pagination',
           loop: true
-        },
-        swiperList: [{
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/15/9250dbc86a456302.jpg_750x200_b423f532.jpg'
-        }, {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/e5/82b53c47166cfc02.jpg_750x200_0d3a0066.jpg'
-        }]
+        }
       }
+    },
+    props: {
+      swiperList: Array
     }
   }
 </script>

@@ -17,28 +17,10 @@
 <script>
   export default {
     data() {
-      return {
-        weekendList: [
-          {
-            id: '0001',
-            imgUrl: 'https://imgs.qunarzz.com/sight/source/1508/f8/cadd4e229d3402.jpg_r_640x214_c38fb221.jpg',
-            title: '周杰伦',
-            desc: 'ABCDEFG哈利波特与死亡圣器'
-          },
-          {
-            id: '0001',
-            imgUrl: 'https://imgs.qunarzz.com/sight/source/1602/88/bf120edeaea383.jpg_r_640x214_f8591f7b.jpg',
-            title: '周杰伦',
-            desc: 'ABCDEFG哈利波特与死亡圣器'
-          },
-          {
-            id: '0001',
-            imgUrl: 'https://imgs.qunarzz.com/sight/source/1506/45/313877f3917dbe.jpg_r_640x214_1c113e46.jpg',
-            title: '周杰伦',
-            desc: 'ABCDEFG哈利波特与死亡圣器'
-          }
-        ]
-      }
+      return {}
+    },
+    props: {
+      weekendList: Array
     }
   }
 </script>

@@ -8,13 +8,17 @@
       <input class="input-content" type="text" placeholder="输入城市/景点/游玩主题">
     </div>
     <div class="header-right">
-      城市 <span class="iconfont">&#xe62d;</span>
+      {{city}} <span class="iconfont">&#xe62d;</span>
     </div>
   </div>
 </template>
 
 <script>
-  export default{}
+  export default{
+    props: {
+      city: String
+    }
+  }
 </script>
 
 <style lang="stylus" scoped>
