@@ -27,7 +27,9 @@
         <div class="item-list">
           <div class="item border-bottom"
                v-for="(innerItem,key) of item"
-               :key="innerItem.id">{{innerItem.name}}</div>
+               :key="innerItem.id">
+            {{innerItem.name}}
+          </div>
         </div>
       </div>
     </div>
