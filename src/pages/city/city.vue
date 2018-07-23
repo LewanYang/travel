@@ -41,7 +41,6 @@
         let result = res.data
         this.cities = result.data.cities
         this.hotCities = result.data.hotCities
-        console.log(this.cities)
       },
       handleLetterChange(letter) {
         this.letter = letter

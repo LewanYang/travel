@@ -9,16 +9,21 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{city}} <span class="iconfont">&#xe62d;</span>
+        {{this.city}} <span class="iconfont">&#xe62d;</span>
       </div>
     </router-link>
   </div>
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   export default{
     props: {
-      city: String
+    },
+    computed: {
+      ...mapGetters([
+        'city'
+      ])
     }
   }
 </script>
@@ -50,7 +55,8 @@
         margin-top: -.1rem
         width: 80%
     .header-right
-      width: 1.24rem
+      min-width: 1.04rem
+      padding: 0 .1rem
       float: right
       text-align: center
       color: #ffffff
