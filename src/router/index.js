@@ -23,5 +23,13 @@ export default new Router({
       name: 'detail',
       component: Detail
     }
-  ]
+  ],
+  // 这段代码的意思是：切换到新路由时，想要页面滚到顶部
+  scrollBehavior (to, from, savedPosition) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ x: 0, y: 0 })
+      }, 500)
+    })
+  }
 })
